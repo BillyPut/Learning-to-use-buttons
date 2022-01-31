@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class OptionsPressedScript : MonoBehaviour
+public class LevelManagerScript : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -13,11 +14,9 @@ public class OptionsPressedScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-    }
-
-    public void ButtonPressed2()
-    {
-        print("Options selected");
+        if (Input.GetKeyDown(KeyCode.Backspace))
+        {
+            SceneManager.LoadScene("Scene1");
+        }
     }
 }

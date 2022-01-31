@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class StartPressScript : MonoBehaviour
+public class SliderScript : MonoBehaviour
 {
+    public float musicVol;
+   
+
     // Start is called before the first frame update
     void Start()
     {
@@ -11,13 +15,11 @@ public class StartPressScript : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public void CheckMusicVol(float inputVol)
     {
-        
+        Debug.Log("the music vol is=" + inputVol);
+        musicVol = inputVol;
     }
 
-    public void ButtonPressed()
-    {
-        print("Game started");
-    }
+
 }
